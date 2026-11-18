@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS — Portal Kreativitas, Prestasi & Kewirausahaan Siswa-Siswi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Notifikasi Sistem -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Navigasi Utama -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NEXUS EDU-VENTURE</span>
+          <span class="brand-tag">Pusat Pengembangan Potensi, Inovasi & Wirausaha Pelajar</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" aria-label="Navigasi Modul">
+        <button class="nav-item active" data-filter="all">Semua Modul</button>
+        <button class="nav-item" data-filter="landasan">Landasan Program</button>
+        <button class="nav-item" data-filter="kreativitas">01. Kreativitas</button>
+        <button class="nav-item" data-filter="prestasi">02. Prestasi</button>
+        <button class="nav-item" data-filter="wirausaha">03. Kewirausahaan</button>
+        <button class="nav-item" data-filter="komunitas">04. Kolaborasi</button>
+      </nav>
+
+      <div class="user-panel">
+        <div class="reputation-pill">
+          <span class="status-dot"></span>
+          <span class="rep-tier" id="navLevel">Tingkat IV</span>
+          <span class="rep-divider">|</span>
+          <span class="rep-score" id="navXP">1.450 Poin</span>
+        </div>
+        <button id="themeToggle" class="btn-icon" title="Ubah Mode Tampilan" aria-label="Ubah Mode Tampilan">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-banner">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">EKOSISTEM PEMBINAAN PELAJAR INOVATIF</div>
+          <h1>Mengembangkan Potensi, Bakat, Kreativitas, Prestasi, serta Jiwa Inovasi dan Kewirausahaan Siswa-Siswi.</h1>
+          <p>Wadah terpadu bagi siswa-siswi untuk memetakan gagasan kreatif, memamerkan karya purwarupa 3D, memvalidasi rekam jejak prestasi secara kriptografis, serta melatih kemandirian wirausaha sejak di bangku sekolah.</p>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <span class="kpi-label">Karya & Purwarupa Siswa</span>
+            <strong class="kpi-value" id="heroStatKarya">128</strong>
+            <span class="kpi-meta text-teal">Bidang Sains, Desain & Tekno</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Piagam & Prestasi Terverifikasi</span>
+            <strong class="kpi-value" id="heroStatHash">100%</strong>
+            <span class="kpi-meta">Tanda Tangan SHA-256</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Dana Inkubasi Karya Siswa</span>
+            <strong class="kpi-value" id="heroStatDana">Rp 42,50 Jt</strong>
+            <span class="kpi-meta text-indigo">Dukungan Komunitas & Alumni</span>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-label">Jaringan Mentor & Pembina</span>
+            <strong class="kpi-value">85+</strong>
+            <span class="kpi-meta">Guru, Praktisi & Akademisi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Konten Utama -->
+  <main class="container main-content">
+
+    <!-- =======================================================
+         BAGIAN KHUSUS: LANDASAN & PENGERTIAN PROGRAM
+         ======================================================= -->
+    <section class="domain-section" data-category="landasan">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-index">00</span>
+          <div>
+            <h2>Landasan Kreativitas, Inovasi & Kewirausahaan Siswa-Siswi</h2>
+            <p>Kerangka konseptual pembinaan potensi dan bakat pelajar menuju kemandirian berprestasi.</p>
+          </div>
+        </div>
+        <span class="domain-tag tag-teal">Visi & Filosofi Pendidikan</span>
+      </div>
+
+      <div class="philosophy-layout">
+        <!-- Ringkasan Definisi Utama -->
+        <div class="definition-banner">
+          <div class="def-quote">
+            <h3>Pengertian Umum</h3>
+            <p>
+              <strong>Kreativitas dan Kewirausahaan Siswa-Siswi</strong> adalah proses pembinaan terstruktur untuk menggali potensi dasar serta bakat unik setiap pelajar, mengolahnya menjadi gagasan maupun karya nyata yang solutif (<em>inovatif</em>), serta membentuk mentalitas mandiri yang berorientasi pada pencapaian prestasi dan penciptaan nilai tambah bagi masyarakat.
+            </p>
+          </div>
+          <div class="def-pillars">
+            <div class="mini-def">
+              <strong>1. Potensi & Bakat</strong>
+              <span>Kemampuan dasar dan keahlian spesifik siswa yang perlu dikenali serta difasilitasi melalui ruang praktik yang tepat.</span>
+            </div>
+            <div class="mini-def">
+              <strong>2. Kreativitas & Jiwa Inovatif</strong>
+              <span>Daya pikir orisinal untuk merancang gagasan baru serta ketangkasan memperbarui metode menjadi solusi yang bermanfaat.</span>
+            </div>
+            <div class="mini-def">
+              <strong>3. Prestasi & Kewirausahaan</strong>
+              <span>Aktualisasi karya melalui kompetisi yang tervalidasi, disertai keberanian mengelola peluang secara mandiri dan berkelanjutan.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tahapan Pembinaan Interaktif -->
+        <div class="stage-explorer">
+          <div class="stage-tabs" id="stageTabs">
+            <button class="stage-tab active" data-stage="0">Tahap 1: Pemetaan Potensi</button>
+            <button class="stage-tab" data-stage="1">Tahap 2: Eksplorasi Kreativitas</button>
+            <button class="stage-tab" data-stage="2">Tahap 3: Inovasi & Prestasi</button>
+            <button class="stage-tab" data-stage="3">Tahap 4: Hilirisasi Kewirausahaan</button>
+          </div>
+          <div class="stage-content" id="stageDetailBox"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         01. ETALASE KREATIVITAS (CREATIVITY SHOWCASE)
+         ======================================================= -->
+    <section class="domain-section" data-category="kreativitas">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-index">01</span>
+          <div>
+            <h2>Etalase Kreativitas (Creativity Showcase)</h2>
+            <p>Galeri pameran karya 3D/AR siswa, pemetaan konsep desain, dan ruang kolaborasi aset proyek.</p>
+          </div>
+        </div>
+        <span class="domain-tag tag-indigo">Pilar 1 • Karya & Desain</span>
+      </div>
+
+      <div class="bento-grid">
+        <!-- 1.1 Portofolio Imersif (AR/3D Ready) -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 1.1 • SPATIAL PORTFOLIO</span>
+              <h3>Portofolio Imersif (AR / 3D Ready)</h3>
+            </div>
+            <span class="status-badge badge-indigo">3D Interaktif</span>
+          </div>
+          <p class="panel-desc">Tampilkan purwarupa karya siswa dalam format 3D dan simulasi ruang pameran AR. Geser area kanvas untuk memutar objek.</p>
+
+          <div class="cad-viewport" id="viewport3D">
+            <div class="cad-hud-top">
+              <span id="arStatusText">MODE: STUDIO PAMERAN 3D</span>
+              <span id="angleReadout">X: -20° | Y: 35°</span>
+            </div>
+            <div class="scene-3d">
+              <div class="cube-3d" id="cube3D">
+                <div class="face front">PURWARUPA<br><small>TAMPAK DEPAN</small></div>
+                <div class="face back">MODUL I/O<br><small>TAMPAK BELAKANG</small></div>
+                <div class="face right">SENSOR<br><small>SISI KANAN</small></div>
+                <div class="face left">VENTILASI<br><small>SISI KIRI</small></div>
+                <div class="face top">PANEL SURYA<br><small>BAGIAN ATAS</small></div>
+                <div class="face bottom">DUDUKAN<br><small>BAGIAN BAWAH</small></div>
+              </div>
+            </div>
+            <div class="cad-hud-bottom">Klik & geser kursor untuk memutar model 3D</div>
+          </div>
+
+          <div class="control-stack">
+            <div class="slider-row">
+              <label for="rotX">Kemiringan (X)</label>
+              <input type="range" id="rotX" min="-180" max="180" value="-20">
+            </div>
+            <div class="slider-row">
+              <label for="rotY">Putaran (Y)</label>
+              <input type="range" id="rotY" min="-180" max="180" value="35">
+            </div>
+            <div class="action-row">
+              <select id="modelPreset" class="form-select">
+                <option value="slate">Karya 1: Alat Penyaring Udara IoT</option>
+                <option value="indigo">Karya 2: Maket Arsitektur Sekolah Hijau</option>
+                <option value="teal">Karya 3: Kemasan Biodegradable Singkong</option>
+              </select>
+              <button id="toggleARBtn" class="btn btn-secondary">Simulasi AR</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- 1.2 Ideation & Prototyping Hub -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 1.2 • CONCEPT MAPPING</span>
+              <h3>Ideation & Prototyping Hub</h3>
+            </div>
+            <span class="status-badge badge-teal">Pemetaan Ide</span>
+          </div>
+          <p class="panel-desc">Bantu siswa memetakan kerangka ide (mind-mapping), menyusun palet warna moodboard, dan menguji kelayakan konsep.</p>
+
+          <div class="form-stack">
+            <label class="field-label" for="ideaInput">Gagasan / Judul Karya Inovatif Siswa</label>
+            <input type="text" id="ideaInput" class="form-input" value="Aplikasi Bank Sampah Sekolah Terintegrasi Poin Kantin" placeholder="Masukkan konsep karya...">
+            
+            <div class="action-row">
+              <select id="ideaCategory" class="form-select">
+                <option value="tech">Rekayasa Perangkat Lunak & IoT</option>
+                <option value="eco">Inovasi Lingkungan & Pengolahan</option>
+                <option value="creative">Industri Kreatif & Desain Media</option>
+              </select>
+              <button id="generateIdeaBtn" class="btn btn-primary">Petakan Konsep</button>
+            </div>
+          </div>
+
+          <div class="architecture-box">
+            <div class="arch-label">Peta Pikiran Komponen (Mind-Map)</div>
+            <div id="mindmapNodes" class="node-cluster"></div>
+
+            <div class="arch-label">Moodboard Identitas Visual</div>
+            <div id="moodboardColors" class="swatch-strip"></div>
+
+            <div id="ideaScoreBox" class="metric-callout"></div>
+          </div>
+        </article>
+
+        <!-- 1.3 Creative Asset Sandbox -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 1.3 • CLOUD SANDBOX</span>
+              <h3>Creative Asset Sandbox</h3>
+            </div>
+            <span class="status-badge badge-amber">Kolaborasi Tim</span>
+          </div>
+          <p class="panel-desc">Ruang kerja bersama bagi kelompok siswa untuk membagikan kode program, token desain, dan naskah presentasi.</p>
+
+          <div class="collaborator-bar">
+            <div class="avatar-group">
+              <span class="avatar av-indigo" title="Ketua Tim">KT</span>
+              <span class="avatar av-teal" title="Desainer UI">UI</span>
+              <span class="avatar av-slate" title="Penulis Riset">PR</span>
+            </div>
+            <span class="collab-status">3 anggota kelompok terhubung</span>
+          </div>
+
+          <div class="tab-strip">
+            <button class="tab-btn active" data-tab="code">purwarupa.html</button>
+            <button class="tab-btn" data-tab="style">desain.css</button>
+            <button class="tab-btn" data-tab="copy">abstrak-karya.md</button>
+          </div>
+
+          <textarea id="sandboxEditor" class="code-editor" rows="5" spellcheck="false"></textarea>
+
+          <div class="action-row">
+            <button id="simulatePeerBtn" class="btn btn-secondary">Tarik Masukan Anggota</button>
+            <button id="saveAssetBtn" class="btn btn-primary">Simpan Versi</button>
+          </div>
+          <div id="snapshotLog" class="status-footer">Status Repositori: Siap menerima penyimpanan versi baru.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         02. REKAM JEJAK PRESTASI (ACHIEVEMENT VALIDATION)
+         ======================================================= -->
+    <section class="domain-section" data-category="prestasi">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-index">02</span>
+          <div>
+            <h2>Rekam Jejak Prestasi (Achievement Validation)</h2>
+            <p>Sertifikat digital terenkripsi, gamifikasi capaian siswa, serta pengukuran dampak nyata inovasi.</p>
+          </div>
+        </div>
+        <span class="domain-tag tag-teal">Pilar 2 • Validasi Prestasi</span>
+      </div>
+
+      <div class="bento-grid">
+        <!-- 2.1 Smart Digital Credentials -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 2.1 • DIGITAL CREDENTIALS</span>
+              <h3>Smart Digital Credentials</h3>
+            </div>
+            <span class="status-badge badge-teal">Anti-Pemalsuan</span>
+          </div>
+          <p class="panel-desc">Sistem piagam dan sertifikat keahlian berbasis kriptografi web (SHA-256) yang terverifikasi permanen.</p>
+
+          <div id="credentialList" class="ledger-list"></div>
+
+          <div class="form-stack divider-top">
+            <input type="text" id="newCertTitle" class="form-input" placeholder="Nama Piagam / Prestasi Siswa Baru...">
+            <div class="action-row">
+              <button id="mintCertBtn" class="btn btn-primary">Terbitkan Piagam</button>
+              <button id="verifyHashBtn" class="btn btn-secondary">Verifikasi Keaslian</button>
+            </div>
+          </div>
+          <div id="verifyResult" class="status-footer">Seluruh piagam siap disinkronkan ke portofolio profesional.</div>
+        </article>
+
+        <!-- 2.2 Gamifikasi Milestone & Leaderboard -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 2.2 • MILESTONE & RANKING</span>
+              <h3>Gamifikasi Milestone & Leaderboard</h3>
+            </div>
+            <span class="status-badge badge-indigo">Pohon Capaian</span>
+          </div>
+          <p class="panel-desc">Rekam tahapan penyelesaian proyek siswa untuk memberikan poin apresiasi dan memantau papan peringkat inovator.</p>
+
+          <div class="task-list" id="milestoneList">
+            <button class="task-row" data-xp="150">
+              <span class="task-title">Menyelesaikan Purwarupa Karya Inovasi Sekolah</span>
+              <span class="task-pts">+150 Poin</span>
+            </button>
+            <button class="task-row" data-xp="250">
+              <span class="task-title">Lolos Seleksi Finalis Kompetisi FIKSI / OPSI</span>
+              <span class="task-pts">+250 Poin</span>
+            </button>
+            <button class="task-row" data-xp="200">
+              <span class="task-title">Mencapai Target Penjualan Perdana Produk Bazar</span>
+              <span class="task-pts">+200 Poin</span>
+            </button>
+          </div>
+
+          <div class="table-caption">Papan Peringkat Pelajar Inovatif</div>
+          <div id="leaderboardBox" class="ranking-table"></div>
+        </article>
+
+        <!-- 2.3 Verified Impact Metrics -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 2.3 • IMPACT METRICS</span>
+              <h3>Verified Impact Metrics</h3>
+            </div>
+            <span class="status-badge badge-teal">Dampak Nyata</span>
+          </div>
+          <p class="panel-desc">Ukur kontribusi nyata dari proyek siswa, seperti pengurangan limbah/emisi karbon dan jumlah warga sekolah yang terbantu.</p>
+
+          <div class="metric-split">
+            <div class="metric-tile">
+              <span class="metric-label">Limbah & Emisi Direduksi</span>
+              <strong class="metric-number text-teal" id="impactCO2">340 kg</strong>
+            </div>
+            <div class="metric-tile">
+              <span class="metric-label">Pengguna Terbantu</span>
+              <strong class="metric-number" id="impactUsers">1.280</strong>
+            </div>
+          </div>
+
+          <div class="chart-wrapper">
+            <canvas id="impactCanvas" width="340" height="145"></canvas>
+          </div>
+
+          <button id="addImpactBtn" class="btn btn-secondary full-width">Catat Dampak Proyek Bulan Ini</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         03. AKSELERATOR KEWIRAUSAHAAN (ENTREPRENEURSHIP)
+         ======================================================= -->
+    <section class="domain-section" data-category="wirausaha">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-index">03</span>
+          <div>
+            <h2>Akselerator Kewirausahaan (Entrepreneurship Ecosystem)</h2>
+            <p>Pencocokan hibah inkubasi, ruang presentasi bisnis (pitching), etalase produk MVP siswa, dan simulator finansial.</p>
+          </div>
+        </div>
+        <span class="domain-tag tag-amber">Pilar 3 • Wirausaha Muda</span>
+      </div>
+
+      <div class="bento-grid">
+        <!-- 3.1 Smart Investor Matchmaking & Virtual Pitching -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 3.1 • MATCHMAKING & PITCH</span>
+              <h3>Investor Matchmaking & Virtual Pitching</h3>
+            </div>
+            <span class="status-badge badge-indigo">Inkubator & Hibah</span>
+          </div>
+          <p class="panel-desc">Cocokkan profil usaha siswa dengan program hibah/inkubator yang relevan dan latih presentasi bisnis berdurasi 60 detik.</p>
+
+          <div class="action-row">
+            <select id="startupSector" class="form-select">
+              <option value="edtech">Bidang: Aplikasi Edukasi & Teknologi</option>
+              <option value="greentech">Bidang: Produk Ramah Lingkungan & Daur Ulang</option>
+              <option value="saas">Bidang: Kuliner Kreatif, Kriya & Jasa Siswa</option>
+            </select>
+            <button id="matchInvestorBtn" class="btn btn-primary">Cocokkan</button>
+          </div>
+
+          <div id="investorMatches" class="directory-list"></div>
+
+          <div class="pitch-timer-box">
+            <div>
+              <span class="timer-label">Ruang Latihan Virtual Pitching (60 Detik)</span>
+              <strong class="timer-clock" id="pitchTimer">01:00</strong>
+            </div>
+            <button id="startPitchBtn" class="btn btn-secondary">Mulai Pitching</button>
+          </div>
+          <div id="pitchFeedback" class="status-footer">Struktur Pitching: Masalah • Solusi Produk • Keunggulan • Rencana Usaha.</div>
+        </article>
+
+        <!-- 3.2 Micro-Crowdfunding & MVP Marketplace -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 3.2 • MVP MARKETPLACE</span>
+              <h3>Micro-Crowdfunding & MVP Store</h3>
+            </div>
+            <span class="status-badge badge-amber">Dana Komunitas</span>
+          </div>
+          <p class="panel-desc">Etalase bagi siswa wirausaha untuk memasarkan produk awal (MVP) atau menggalang dana produksi skala mikro.</p>
+
+          <div id="mvpList" class="campaign-list"></div>
+
+          <div class="form-stack divider-top">
+            <input type="text" id="newMvpTitle" class="form-input" placeholder="Nama Produk Wirausaha Siswa Baru...">
+            <button id="addMvpBtn" class="btn btn-secondary">Daftarkan Produk MVP Baru</button>
+          </div>
+        </article>
+
+        <!-- 3.3 Business Simulator Dashboard -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 3.3 • FINANCIAL SIMULATOR</span>
+              <h3>Business Simulator Dashboard</h3>
+            </div>
+            <span class="status-badge badge-teal">Analisis Usaha</span>
+          </div>
+          <p class="panel-desc">Alat simulasi bagi wirausahawan pelajar untuk menghitung proyeksi arus kas, titik impas (BEP), dan rekomendasi harga jual.</p>
+
+          <div class="input-grid-2">
+            <div>
+              <label class="field-label" for="simCost">Biaya Produksi / Unit (Rp)</label>
+              <input type="number" id="simCost" class="form-input" value="15000">
+            </div>
+            <div>
+              <label class="field-label" for="simPrice">Harga Jual / Unit (Rp)</label>
+              <input type="number" id="simPrice" class="form-input" value="28000">
+            </div>
+            <div>
+              <label class="field-label" for="simFixed">Biaya Operasional Tetap (Rp)</label>
+              <input type="number" id="simFixed" class="form-input" value="650000">
+            </div>
+            <div>
+              <label class="field-label" for="simUnits">Target Terjual / Bulan</label>
+              <input type="number" id="simUnits" class="form-input" value="120">
+            </div>
+          </div>
+
+          <button id="runSimBtn" class="btn btn-primary full-width">Hitung Proyeksi Usaha</button>
+
+          <div id="simResultBox" class="financial-summary"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         04. KOMUNITAS & KOLABORASI (COMMUNITY & SYNERGY)
+         ======================================================= -->
+    <section class="domain-section" data-category="komunitas">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-index">04</span>
+          <div>
+            <h2>Komunitas & Kolaborasi (Community & Synergy)</h2>
+            <p>Pencarian rekan tim lintas keahlian, umpan informasi lomba terbaru, serta penjadwalan mentoring terstruktur.</p>
+          </div>
+        </div>
+        <span class="domain-tag tag-indigo">Pilar 4 • Sinergi & Mentor</span>
+      </div>
+
+      <div class="bento-grid">
+        <!-- 4.1 Skill-Matching Co-Founder Finder -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 4.1 • PARTNER MATCHING</span>
+              <h3>Skill-Matching Co-Founder Finder</h3>
+            </div>
+            <span class="status-badge badge-indigo">Kolaborasi Tim</span>
+          </div>
+          <p class="panel-desc">Temukan rekan satu tim (programmer, desainer, atau pengelola bisnis) berdasarkan kecocokan minat dan keahlian.</p>
+
+          <div id="cofounderCard" class="profile-card"></div>
+
+          <div class="action-row">
+            <button id="skipPartnerBtn" class="btn btn-secondary">Lihat Rekan Lain</button>
+            <button id="connectPartnerBtn" class="btn btn-primary">Ajak Bergabung Tim</button>
+          </div>
+          <div id="matchedPartnersLog" class="status-footer">Rekan Terhubung: Belum ada anggota baru.</div>
+        </article>
+
+        <!-- 4.2 Hyper-Personalized Opportunity Feed -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 4.2 • OPPORTUNITY FEED</span>
+              <h3>Personalized Opportunity Feed</h3>
+            </div>
+            <span class="status-badge badge-teal">Info Lomba & Webinar</span>
+          </div>
+          <p class="panel-desc">Umpan informasi terkurasi berisi jadwal kompetisi pelajar, tren inovasi, dan pelatihan kewirausahaan sesuai minat.</p>
+
+          <div class="filter-pills" id="interestTags">
+            <button class="pill-btn active" data-tag="all">Semua Info</button>
+            <button class="pill-btn" data-tag="web">Teknologi & Sains</button>
+            <button class="pill-btn" data-tag="bisnis">Wirausaha (FIKSI)</button>
+            <button class="pill-btn" data-tag="desain">Desain & Karya</button>
+          </div>
+
+          <div id="opportunityFeed" class="feed-list"></div>
+        </article>
+
+        <!-- 4.3 Mentorship Smart-Contract -->
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <span class="module-code">FITUR 4.3 • MENTORSHIP LOG</span>
+              <h3>Mentorship Smart-Contract</h3>
+            </div>
+            <span class="status-badge badge-amber">Bimbingan 1-on-1</span>
+          </div>
+          <p class="panel-desc">Jadwalkan sesi bimbingan dengan guru pembina atau praktisi ahli dengan target capaian yang tercatat otomatis.</p>
+
+          <div class="form-stack">
+            <select id="mentorSelect" class="form-select">
+              <option value="Drs. Hendra Wijaya, M.Pd. — Pembina Kewirausahaan">Drs. Hendra Wijaya, M.Pd. — Pembina Kewirausahaan</option>
+              <option value="Nadia Kusuma, S.Ds. — Praktisi Desain Produk">Nadia Kusuma, S.Ds. — Praktisi Desain Produk</option>
+              <option value="Bagas Pratama, S.Kom. — Mentor Rekayasa Web">Bagas Pratama, S.Kom. — Mentor Rekayasa Web</option>
+            </select>
+            <input type="text" id="mentorGoal" class="form-input" placeholder="Target Sesi (misal: Evaluasi Proposal & Uji Coba Produk)">
+            <button id="createContractBtn" class="btn btn-primary">Jadwalkan & Catat Target</button>
+          </div>
+
+          <div id="contractList" class="ledger-list"></div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <div>
+        <strong>NEXUS EDU-VENTURE</strong> — Mengembangkan Potensi, Bakat, Kreativitas, Prestasi, Jiwa Inovasi & Kewirausahaan Siswa-Siswi.
+      </div>
+      <div class="footer-meta">
+        HTML5, CSS3 & Vanilla JavaScript Murni
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
